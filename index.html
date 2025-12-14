@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercy Igori | Coach & Web Developer</title>
+  <link rel="stylesheet" href="style.css" >
+  <link rel="preconnect" href="https://fonts.googleapis.com" >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  >
+  <script src="https://kit.fontawesome.com/a2d9d6b4d3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <h1 class="logo">MeRcy <span>IgOri</span></h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero fade-in">
+    <div class="hero-text">
+      <h2>Hello, I'm <span>Mercy Igori</span></h2>
+      <p>A passionate Personal Development Coach & Web Developer dedicated to helping people and brands grow.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">Let’s Connect</a>
+        <a href="cv/Mercy_Igori_CV.pdf" class="btn btn-outline" download>Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about fade-in">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="whiteimage.jpg" alt="Mercy Igori" >
+      <p>
+        I'm <strong>Mercy Igori</strong> — a creative and purpose-driven professional who blends personal development with technology. 
+        As a coach, I help people discover clarity and confidence. As a web developer, I design beautiful, responsive, and user-friendly websites 
+        that help individuals and businesses express their vision online.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects fade-in">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Coaching Website</h3>
+        <p>A landing page for personal growth programs with clean design and interactive forms.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Portfolio Demo</h3>
+        <p>A responsive portfolio template showcasing coaching and web dev skills.</p>
+        <a href="https://mercyigori.github.io/website-demo/" class="btn">Visit</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Mother & Child Hospital Page</h3>
+        <p>A healthcare social branding and awareness project integrating modern UI and empathy-driven content.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact fade-in">
+    <h2>Contact Me</h2>
+    <p>Interested in working together or learning more about my coaching sessions? Let’s connect!</p>
+
+    <div class="contact-details">
+      <p><strong>📍 Location:</strong> Edo State, Nigeria</p>
+      <p><strong>📞 Phone:</strong> +2349027249877</p>
+      <p><strong>📧 Email:</strong> <a href="mailto:marvismercy2@gmail.com">marvismercy2@gmail.com</a></p>
+      <p><strong>🌐 Website:</strong> <a href="https://mercyigori.github.io" target="_blank">mercyigori.github.io</a></p>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+      <a href="https://linkedin.com/in/mercyigigori" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/mercyigigori" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/mercyigori" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+
+    <!-- Contact Form -->
+    <form>
+      <input type="text" placeholder="Your Name" required >
+      <input type="email" placeholder="Your Email" required >
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mercy Igori | Designed with ❤ and Purpose.</p>
+  </footer>
+
+  <!-- JavaScript for Fade Animations -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+</body>
+</html>
